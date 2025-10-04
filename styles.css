@@ -9,3 +9,9 @@ img {
     max-width: 500px;
     width: 100%;
 }
+
+.card-img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+;
+}
