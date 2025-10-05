@@ -17,14 +17,15 @@
                 <span class="fs-5">Instagram</span>
             </div>
             <div class="buttons d-flex align-items-center gap-2">
-                <button type="button" class="btn btn-success">Create a new post</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-gear"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and data</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
@@ -34,6 +35,30 @@
         </div>
     </nav>
 
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newPostModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="postCaption" class="form-label fw-bold">Caption:</label>
+                    <textarea class="form-control" id="postCaption" rows="3" placeholder="Add the caption of your post here"></textarea>
+                    <div class="d-flex mt-3 fs-5">
+                        <i class="fa-solid fa-camera me-3 text-secondary" style="cursor: pointer;"></i>
+                        <i class="fa-solid fa-location-dot text-secondary" style="cursor: pointer;"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <main class="container">
         <nav class="tab-bar">
             <div class="nav nav-tabs justify-content-center" id="nav-tab" role="presentation">
@@ -42,7 +67,7 @@
                     <i class="fa-solid fa-table-cells tab-icon"></i>
                 </button>
             
-                <button class="nav-link" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed"
+                <button class="nav-link btn-secondary" id="nav-feed-tab" data-bs-toggle="tab" data-bs-target="#nav-feed"
                     type="button" role="tab" aria-controls="nav-feed" aria-selected="false">
                     <i class="fa-solid fa-square"></i>
                 </button>
@@ -95,7 +120,7 @@
                         </div>
                         <img src="ig-1.jpg" class="card-img" alt="Post 1">
                         <div class="card-footer">
-                            <h5 class="card-title"><strong>230 likes</strong></h5>
+                            <h5 class="card-title fs-5"><strong>230 likes</strong></h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, praesentium.</p>
                         </div>
                     </div>
@@ -110,7 +135,7 @@
                         </div>
                         <img src="ig-2.jpg" class="card-img" alt="Post 2">
                         <div class="card-footer">
-                             <h5 class="card-title"><strong>230 likes</strong></h5>
+                             <h5 class="card-title fs-5"><strong>230 likes</strong></h5>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, quaerat.</p>
                         </div>
                     </div>
