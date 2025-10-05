@@ -8,10 +8,19 @@ img {
 .card {
     max-width: 500px;
     width: 100%;
+    --bs-card-inner-border-radius:0
 }
 
 .card-img {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-;
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: none;
+    --bs-nav-tabs-border-color: none;
+}
+
+.log-in {
+    color: red;
 }
